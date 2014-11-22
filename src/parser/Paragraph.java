@@ -1,10 +1,11 @@
 package parser;
+
 import org.w3c.dom.*;
 
 public class Paragraph {
 	private String type;
 	private String text;
-	
+
 	public Paragraph(String startType, String startText) {
 		setType(startType);
 		setText(startText);
@@ -17,14 +18,14 @@ public class Paragraph {
 
 		Paragraph p = new Paragraph(type, text);
 		return p;
-		
+
 	}
 
 	private static String getTextValue(Element eP, String tagName) {
 		String textVal = null;
 		NodeList nl = eP.getElementsByTagName(tagName);
 		if (nl != null && nl.getLength() > 0) {
-			Element el = (Element)nl.item(0);
+			Element el = (Element) nl.item(0);
 			textVal = el.getFirstChild().getNodeValue();
 		}
 		return textVal;

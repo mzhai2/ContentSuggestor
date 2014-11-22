@@ -1,10 +1,10 @@
 package parser;
+
 import java.io.IOException;
 
 import org.jsoup.*;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-
 
 public class Parse {
 
@@ -12,7 +12,9 @@ public class Parse {
 		// TODO Auto-generated method stub
 		Document doc = null;
 		try {
-			doc = Jsoup.connect("http://www.imsdb.com/scripts/500-Days-of-Summer.html").get();
+			doc = Jsoup.connect(
+					"http://www.imsdb.com/scripts/500-Days-of-Summer.html")
+					.get();
 		} catch (IOException e) {
 			System.out.println("Foooo");
 			e.printStackTrace();
@@ -20,8 +22,8 @@ public class Parse {
 		String titleString = doc.title();
 		Elements srctext = doc.getElementsByClass("scrtext");
 		srctext.toArray();
-		//		String a = srctext.toString();
-//		System.out.println(a);
+		// String a = srctext.toString();
+		// System.out.println(a);
 	}
 
 }
