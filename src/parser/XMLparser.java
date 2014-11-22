@@ -2,9 +2,9 @@ package parser;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -85,7 +85,7 @@ public class XMLparser {
 
 		System.out.println("Paragraph'" + paraList.size() + "'.");
 
-		java.util.Iterator<Paragraph> it = paraList.iterator();
+		Iterator<Paragraph> it = paraList.iterator();
 		while(it.hasNext()) {
 			System.out.println(it.next().toString());
 		}
