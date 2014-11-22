@@ -37,17 +37,21 @@ public class XMLparser {
 	private void parseDocument(){
 		Element docEle = dom.getDocumentElement();
 		NodeList nl = docEle.getElementsByTagName("Paragraph");
+		//System.out.println("Value of 1st node: " + nl.item(0).getTextContent());
 		if(nl != null && nl.getLength() > 0) {
 			for(int i = 0 ; i < nl.getLength();i++) {
 
 				//get the Paragraph element (character/dialogue)
 				Element p = (Element)nl.item(i);
+				
 
 				//get the Paragraph object (text object)
 				Paragraph e = getParagraph(p);
 
 				//add it to list
+				if(e!=null){
 				paraList.add(e);
+				}
 			}
 		}
 	
@@ -56,13 +60,14 @@ public class XMLparser {
 	private Paragraph getParagraph(Element el) {
 		// TODO Auto-generated method stub
 		Paragraph p = null;
-		if(el.getAttribute("Type")=="Character"){
+		if(el.getAttribute("Type").equals("Character")){
 			String character = getTextValue(el,"Text");
 			String type = el.getAttribute("Type");
+			
 			p = new Paragraph(type,character);
 			
 		}
-		if(el.getAttribute("Type")=="Dialogue"){
+		if(el.getAttribute("Type").equals("Dialogue")){
 			String dialogue = getTextValue(el,"Text");
 			String type = el.getAttribute("Type");
 			p = new Paragraph(type,dialogue);
@@ -83,11 +88,12 @@ public class XMLparser {
 	}
 	protected void printData(){
 
-		System.out.println("Paragraph'" + paraList.size() + "'.");
 
 		Iterator<Paragraph> it = paraList.iterator();
 		while(it.hasNext()) {
-			System.out.println(it.next().toString());
+			Paragraph curr = it.next();
+			System.out.print(/*curr.getType()+ ":" + */ curr.getText());
+			System.out.println();
 		}
 	}
 

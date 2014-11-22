@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <FinalDraft DocumentType="Script" Template="No" Version="1">
 
-  <Content>
      <Paragraph Type="Scene Heading">
         <Text>SPACE.</Text>
      </Paragraph>
@@ -11108,103 +11107,4 @@
      <Paragraph Type="Action">
         <Text>END</Text>
      </Paragraph>
-  </Content>
-  <TitlePage>
-     <Content>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph><Text></Text></Paragraph>
-      <Paragraph Alignment="Center">
-        <Text>Interstellar</Text>
-      </Paragraph>
-      <Paragraph Alignment="Center"><Text></Text></Paragraph>
-      <Paragraph Alignment="Center"><Text></Text></Paragraph>
-      <Paragraph Alignment="Center"><Text></Text></Paragraph>
-      <Paragraph Alignment="Center">
-        <Text>By</Text>
-      </Paragraph>
-      <Paragraph Alignment="Center"><Text></Text></Paragraph>
-      <Paragraph Alignment="Center"><Text></Text></Paragraph>
-      <Paragraph Alignment="Center">
-        <Text>Jonathan Nolan</Text>
-      </Paragraph>
-     </Content>
-  </TitlePage>
-<HeaderAndFooter FooterFirstPage="No" FooterVisible="No" HeaderFirstPage="No" HeaderVisible="Yes" StartingPage="1"><Header><Paragraph Alignment="Right" FirstIndent="0.00" Leading="Regular" LeftIndent="1.25" RightIndent="-1.25" SpaceBefore="0" Spacing="1" StartsNewPage="No"><Text AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style=""> </Text><DynamicLabel Type="Page #"/><Text AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style="">.</Text></Paragraph></Header><Footer><Paragraph Alignment="Right" FirstIndent="0.00" Leading="Regular" LeftIndent="1.25" RightIndent="-1.25" SpaceBefore="0" Spacing="1" StartsNewPage="No"><Text AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style=""></Text></Paragraph></Footer></HeaderAndFooter>  <PageLayout BackgroundColor="#FFFFFFFFFFFF" BottomMargin="72" BreakDialogueAndActionAtSentences="Yes" DocumentLeading="Normal" FooterMargin="36" ForegroundColor="#000000000000" HeaderMargin="36" InvisiblesColor="#A0A0A0A0A0A0" TopMargin="72" UsesSmartQuotes="No">
-    <AutoCastList AddParentheses="Yes" AutomaticallyGenerate="No" CastListElement="Cast List"/>
-  </PageLayout>
-
-  <ElementSettings Type="General">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style=""/>
-    <ParagraphSpec Alignment="Left" FirstIndent="0.00" Leading="Regular" LeftIndent="1.50" RightIndent="7.50" SpaceBefore="0" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="General" ReturnKey="General" Shortcut="0"/>
-  </ElementSettings>
-
-  <ElementSettings Type="Scene Heading">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style="AllCaps"/>
-    <ParagraphSpec Alignment="Left" FirstIndent="0.00" Leading="Regular" LeftIndent="1.50" RightIndent="7.50" SpaceBefore="24" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="Scene Heading" ReturnKey="Action" Shortcut="1"/>
-  </ElementSettings>
-
-  <ElementSettings Type="Action">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style=""/>
-    <ParagraphSpec Alignment="Left" FirstIndent="0.00" Leading="Regular" LeftIndent="1.50" RightIndent="7.50" SpaceBefore="12" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="Action" ReturnKey="Action" Shortcut="2"/>
-  </ElementSettings>
-
-  <ElementSettings Type="Character">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style="AllCaps"/>
-    <ParagraphSpec Alignment="Left" FirstIndent="0.00" Leading="Regular" LeftIndent="3.50" RightIndent="7.25" SpaceBefore="12" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="Character" ReturnKey="Dialogue" Shortcut="3"/>
-  </ElementSettings>
-
-  <ElementSettings Type="Parenthetical">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style=""/>
-    <ParagraphSpec Alignment="Left" FirstIndent="-0.10" Leading="Regular" LeftIndent="3.00" RightIndent="5.50" SpaceBefore="0" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="Parenthetical" ReturnKey="Dialogue" Shortcut="4"/>
-  </ElementSettings>
-
-  <ElementSettings Type="Dialogue">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style=""/>
-    <ParagraphSpec Alignment="Left" FirstIndent="0.00" Leading="Regular" LeftIndent="2.50" RightIndent="6.00" SpaceBefore="0" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="Dialogue" ReturnKey="Action" Shortcut="5"/>
-  </ElementSettings>
-
-  <ElementSettings Type="Transition">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style="AllCaps"/>
-    <ParagraphSpec Alignment="Right" FirstIndent="0.00" Leading="Regular" LeftIndent="5.50" RightIndent="7.10" SpaceBefore="12" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="Transition" ReturnKey="Scene Heading" Shortcut="6"/>
-  </ElementSettings>
-
-  <ElementSettings Type="Shot">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style="AllCaps"/>
-    <ParagraphSpec Alignment="Left" FirstIndent="0.00" Leading="Regular" LeftIndent="1.50" RightIndent="7.50" SpaceBefore="24" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="Scene Heading" ReturnKey="Action" Shortcut="7"/>
-  </ElementSettings>
-
-  <ElementSettings Type="Cast List">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style="AllCaps"/>
-    <ParagraphSpec Alignment="Left" FirstIndent="0.00" Leading="Regular" LeftIndent="1.50" RightIndent="7.50" SpaceBefore="0" Spacing="1" StartsNewPage="No"/>
-    <Behavior PaginateAs="Action" ReturnKey="Action" Shortcut="8"/>
-  </ElementSettings>
-  
-  <ElementSettings Type="New Act">
-    <FontSpec AdornmentStyle="0" Background="#FFFFFFFFFFFF" Color="#000000000000" Font="Courier Final Draft" RevisionID="0" Size="12" Style="Underline+AllCaps"/>
-    <ParagraphSpec Alignment="Center" FirstIndent="0.00" Leading="Regular" LeftIndent="1.50" RightIndent="7.50" SpaceBefore="120" Spacing="1" StartsNewPage="Yes"/>
-    <Behavior PaginateAs="General" ReturnKey="Scene Heading" Shortcut=""/>
-  </ElementSettings>
   </FinalDraft>
