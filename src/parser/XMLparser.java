@@ -58,25 +58,19 @@ public class XMLparser {
 	}
 
 	private Paragraph getParagraph(Element el) {
-		// TODO Auto-generated method stub
 		Paragraph p = null;
 		if(el.getAttribute("Type").equals("Character")){
 			String character = getTextValue(el,"Text");
-			String type = el.getAttribute("Type");
-			
-			p = new Paragraph(type,character);
-			
+			p = new Paragraph("Character",character);
 		}
 		if(el.getAttribute("Type").equals("Dialogue")){
 			String dialogue = getTextValue(el,"Text");
-			String type = el.getAttribute("Type");
-			p = new Paragraph(type,dialogue);
+			p = new Paragraph("Dialogue",dialogue);
 		}
 		return p;
 	}
 
 	private String getTextValue(Element el, String string) {
-		// TODO Auto-generated method stub
 		String textVal = null;
 		NodeList nl = el.getElementsByTagName(string);
 		if(nl != null && nl.getLength() > 0) {
@@ -87,14 +81,22 @@ public class XMLparser {
 		return textVal;
 	}
 	protected void printData(){
-
-
 		Iterator<Paragraph> it = paraList.iterator();
 		while(it.hasNext()) {
 			Paragraph curr = it.next();
-			System.out.print(/*curr.getType()+ ":" + */ curr.getText());
+			System.out.print(curr.getText());
 			System.out.println();
 		}
+	}
+	
+	public List<List<String>> getTextLists() {
+		List<String> s = new ArrayList<>();
+		Iterator<Paragraph> it = paraList.iterator();
+		while(it.hasNext()) {
+			Paragraph curr = it.next();
+			s.add(curr.getText());
+		}
+		return s;
 	}
 
 
