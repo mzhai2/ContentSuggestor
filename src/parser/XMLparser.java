@@ -15,7 +15,7 @@ import org.xml.sax.SAXException;
 public class XMLparser {
 
 	private Document dom;
-	private List<Paragraph> paraList = new ArrayList<>();
+	private List<List<Paragraph>> convoList = new ArrayList<>();
 	private String character;
 
 	protected void parseXmlFile(String a){
@@ -40,18 +40,22 @@ public class XMLparser {
 		NodeList nl = docEle.getElementsByTagName("Paragraph");
 		//System.out.println("Value of 1st node: " + nl.item(0).getTextContent());
 		if(nl != null && nl.getLength() > 0) {
+			List<Paragraph> convo = new ArrayList<>();
 			for(int i = 0 ; i < nl.getLength();i++) {
-
 				//get the Paragraph element (character/dialogue)
 				Element p = (Element)nl.item(i);
 				
 
 				//get the Paragraph object (text object)
 				Paragraph e = getParagraph(p);
-
-				//add it to list
-				if(e!=null){
-				paraList.add(e);
+				//add it to conversation
+				if (e!=null && !e.getText().equals("split scene")) {
+					convo.add(e);
+				}
+				// if scene transition, add to convolist create new convo
+				if(e!=null && e.getText().equals("split scene")){
+					convoList.add(convo);
+					convo = new ArrayList<>();
 				}
 			}
 		}
@@ -67,6 +71,9 @@ public class XMLparser {
 			String dialogue = getTextValue(el,"Text");
 			p = new Paragraph(character,dialogue);
 		}
+		if(el.getAttribute("Type").equals("Scene Heading")){
+			p = new Paragraph("","split scene");
+		}
 		return p;
 	}
 
@@ -81,23 +88,25 @@ public class XMLparser {
 		return textVal;
 	}
 	protected void printData(){
-		Iterator<Paragraph> it = paraList.iterator();
-		while(it.hasNext()) {
-			Paragraph curr = it.next();
-			System.out.print(curr.getText() + " " + curr.getType());
+		for (List<Paragraph> paraList : convoList) {  
+			Iterator<Paragraph> it = paraList.iterator();
+			while(it.hasNext()) {
+				Paragraph curr = it.next();
+				System.out.print(curr.getText() + " " + curr.getType() +"\n");
+			}
 			System.out.println();
 		}
 	}
 	
-	public List<List<String>> getTextLists() {
-		List<String> s = new ArrayList<>();
-		Iterator<Paragraph> it = paraList.iterator();
-		while(it.hasNext()) {
-			Paragraph curr = it.next();
-			s.add(curr.getText());
-		}
-		return s;
-	}
+//	public List<List<String>> getTextLists() {
+//		List<String> s = new ArrayList<>();
+//		Iterator<Paragraph> it = convoList.iterator();
+//		while(it.hasNext()) {
+//			Paragraph curr = it.next();
+//			s.add(curr.getText());
+//		}
+//		return s;
+//	}
 
 
 }
