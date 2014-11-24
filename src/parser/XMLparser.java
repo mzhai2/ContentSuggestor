@@ -16,6 +16,7 @@ public class XMLparser {
 
 	private Document dom;
 	private List<Paragraph> paraList = new ArrayList<>();
+	private String character;
 
 	protected void parseXmlFile(String a){
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -60,12 +61,11 @@ public class XMLparser {
 	private Paragraph getParagraph(Element el) {
 		Paragraph p = null;
 		if(el.getAttribute("Type").equals("Character")){
-			String character = getTextValue(el,"Text");
-			p = new Paragraph("Character",character);
+			character = getTextValue(el,"Text");
 		}
 		if(el.getAttribute("Type").equals("Dialogue")){
 			String dialogue = getTextValue(el,"Text");
-			p = new Paragraph("Dialogue",dialogue);
+			p = new Paragraph(character,dialogue);
 		}
 		return p;
 	}
@@ -84,7 +84,7 @@ public class XMLparser {
 		Iterator<Paragraph> it = paraList.iterator();
 		while(it.hasNext()) {
 			Paragraph curr = it.next();
-			System.out.print(curr.getText());
+			System.out.print(curr.getText() + " " + curr.getType());
 			System.out.println();
 		}
 	}
