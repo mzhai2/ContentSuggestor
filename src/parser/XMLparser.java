@@ -54,7 +54,8 @@ public class XMLparser {
 				}
 				// if scene transition, add to convolist create new convo
 				if(e!=null && e.getText().equals("split scene")){
-					convoList.add(convo);
+					if (convo.size() > 0)
+						convoList.add(convo);
 					convo = new ArrayList<>();
 				}
 			}
@@ -92,7 +93,7 @@ public class XMLparser {
 			Iterator<Paragraph> it = paraList.iterator();
 			while(it.hasNext()) {
 				Paragraph curr = it.next();
-				System.out.print(curr.getText() + " " + curr.getType() +"\n");
+				System.out.print(curr.getType() + ": " + curr.getText() + "\n");
 			}
 			System.out.println();
 		}
