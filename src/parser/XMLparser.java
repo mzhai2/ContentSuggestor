@@ -91,15 +91,16 @@ public class XMLparser {
 
 		return textVal;
 	}
-	protected void printData(){
+	public String toString(){
+		String a = new String();
 		for (List<Paragraph> paraList : convoList) {  
 			Iterator<Paragraph> it = paraList.iterator();
 			while(it.hasNext()) {
 				Paragraph curr = it.next();
-				System.out.print(curr.getType() + ": " + curr.getText() + "\n");
+				a+=(curr.getType() + ": " + curr.getText() + "\n");
 			}
-			System.out.println();
 		}
+		return a;
 	}
 	
 	protected void printData(PrintStream out){
