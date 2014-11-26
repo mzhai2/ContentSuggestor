@@ -1,6 +1,7 @@
 package parser;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -9,7 +10,9 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class XMLparser {
@@ -98,6 +101,18 @@ public class XMLparser {
 			System.out.println();
 		}
 	}
+	
+	protected void printData(PrintStream out){
+		for (List<Paragraph> paraList : convoList) {  
+			Iterator<Paragraph> it = paraList.iterator();
+			while(it.hasNext()) {
+				Paragraph curr = it.next();
+				out.print(curr.getType() + ": " + curr.getText() + "\n");
+			}
+			out.println();
+		}
+	}
+	
 	
 //	public List<List<String>> getTextLists() {
 //		List<String> s = new ArrayList<>();
