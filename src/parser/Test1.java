@@ -23,7 +23,7 @@ public class Test1 {
 		fout.close();
 //		System.out.println(parser.toString());
 		
-		StringTokenizer toke = new StringTokenizer(parser.toString(), " \t\n\r\f-.");
+		StringTokenizer toke = new StringTokenizer(parser.toString(), " \t\n\r\f-.,?!");
 
 		System.out.println("I tokenized it, this is how many tokens I have: " + toke.countTokens());
 		Int2ObjectMap<String> map = new Int2ObjectLinkedOpenHashMap<>();
