@@ -29,11 +29,14 @@ public class Test1 {
 		Int2ObjectMap<String> map = new Int2ObjectLinkedOpenHashMap<>();
 		int i = 0;
 		while (toke.hasMoreTokens()) {
-			map.put(i, toke.nextToken());
+			String token = toke.nextToken();
+			if (map.containsValue(token))
+				continue;
+			map.put(i, token);
 			i++;
 		}
 		for (Integer key : map.keySet()) {
-			System.out.println(map.get(key) + " ");
+			System.out.println(map.get(key));
 		}
 	}
 
