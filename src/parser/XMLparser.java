@@ -97,7 +97,7 @@ public class XMLparser {
 			Iterator<Paragraph> it = paraList.iterator();
 			while(it.hasNext()) {
 				Paragraph curr = it.next();
-				a+=(curr.getType() + ": " + curr.getText() + "\n");
+				a+=(curr.getText() + "\n");
 			}
 		}
 		return a;
